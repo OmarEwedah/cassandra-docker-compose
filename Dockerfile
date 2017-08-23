@@ -4,7 +4,6 @@
 
 # Pull base image.
 FROM oscerd/java:oraclejava8
-MAINTAINER Andrea Cosentino <ancosen1985@yahoo.com>
 
 # Download and extract Cassandra
 RUN mkdir /opt/cassandra
