@@ -1,26 +1,20 @@
 version: '2'
 services:
   cassandra:
-    build: .
+    image: omarewedah/cassandra
     ports:
       - "9042:9042"
-    environment:
-      SEED: 172.18.0.2
-#      hosts: 172.17.0.2
 
   cassandra2:
-    build: .
+    image: omarewedah/cassandra
     ports:
       - "9043:9042"
     environment:
-      SEED: 172.18.0.2
-#      hosts: 172.17.0.3
+      SEED: cassandra
 
   cassandra3:
-    build: .
+    image: omarewedah/cassandra
     ports:
       - "9044:9042"
     environment:
-      SEED: 172.18.0.2
-#      hosts: 172.17.0.15
-
+      SEED: cassandra
